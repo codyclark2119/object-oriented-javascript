@@ -74,7 +74,11 @@ class Shape {
     this.name = name;
     this.sides = sides;
   }
-  calcArea() {}
+  calcArea() {
+    switch (this.name) {
+      case 'triangle':
+    }
+  }
   calcCircumference() {}
 }
 
@@ -166,19 +170,18 @@ console.log("Problem 4")
 
 
 //5. Below is a class Earth.  It is instantiated with a earth 'instance'.  Because there is only 1 known earth, we don't want multiple instances of earth.  Modify the class so the properties are usuable WITHOUT instantiating the class.
-console.log("-------------------------------------------")
-console.log("Problem 5")
 */
+console.log('-------------------------------------------');
+console.log('Problem 5');
 
-// class Earth {
-//   name;
-//   planetNum; //distance from the sun.  1-mercury, 2-venus, 3-earth, ...
+class Earth {
+  get name() {
+    return 'Earth';
+  }
+  get planetNum() {
+    return 3;
+  }
+}
 
-//   constructor(name, num) {
-//     this.name = name;
-//     this.planetNum = num;
-//   }
-// }
-
-// const earth = new Earth('earth', 3);
-// console.log(earth);
+console.log(Earth.name);
+console.log(Earth.planetNum);
